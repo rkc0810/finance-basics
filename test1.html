@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+    <title>Finance Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../SiteAssets/ITFinance/css/EY_Standard_Style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://share.ey.net/sites/financebasics/SiteAssets/ITFinance/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://share.ey.net/sites/financebasics/SiteAssets/ITFinance/css/neswfeed.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../SiteAssets/ITFinance/js/EY_Standard_Script.min.js"></script>
+    <script src="../SiteAssets/ITFinance/js/angular.min.js"></script>
+    <script src="../SiteAssets/ITFinance/js/angular-sanitize.js"></script>
+   </head>
+    <style>
+     .bannerDiv {
+            background-image: url("https://share.ey.net/sites/financebasics/SiteAssets/ITFinance/images/Homepage/header.png");
+            height: 306px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+         .mainDiv {
+            background-color: rgba(239, 239, 239, 1);
+            padding: 0px 2.5%;
+            position: relative;
+            overflow: scroll;
+            height: auto;
+            padding: 0px 4%!important;
+        }
+        .secDiv {            
+            background-color: white;
+            overflow: hidden;
+            margin-bottom: 5px;
+            height: auto;
+            padding: 1.8%;            
+        }
+        .bottomDiv {
+            position: absolute;
+            width: 100%;
+            height: 45px;
+            background-color: rgba(191, 191, 191, 1);
+            bottom: 0px;
+            left: 0px;
+        }
+        .month-card {
+            padding: 15px;
+            background-color: white;
+            border-left: 4px solid #7f7f84;
+            margin-bottom: 5px;            
+        }
+        .month-card-sm {
+            padding: 10px;
+            font-size: 80%;
+        }
+        .month-card-lg {
+            padding: 35px;
+            font-size: large;
+        }
+
+        .month-card-yellow {
+            border-color: rgba(253, 229, 0, 1);
+        }
+        .month-card-yellow>strong {
+            color: rgba(0, 0, 0, 1);
+        }
+        .rectangle-border{
+            border: 0.25px solid rgba(239, 239, 239, 1);
+            margin-bottom: 10px;
+            padding: 1% 1.5% 1% 1.5%;
+            line-height: 150%;
+        }
+        .rectangle-top-border{
+            border-top: 4px solid rgba(253, 229, 0, 1) !important;
+            border: 1.5px solid rgba(239, 239, 239, 1);
+            margin-bottom: 10px;
+            padding: 1% 1.5% 1% 1.5%;            
+        }
+        .newcomer-designation{
+            display: inline-block;           
+            position: absolute;
+            margin: 0.5% 0 0 1%;
+        }
+        .newcomer-designation>div{
+            font-size:12px;
+        }
+        .btn-add{
+            float: right;
+            background: rgba(253, 229, 0, 1);
+            border: none;
+            border-color: rgba(253, 229, 0, 1);
+            color: black;
+            height: 30px;
+            width: 70px;
+            padding: 5px 0px 18px 15px;
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 12px;     
+        }
+        .btn-news{
+            background-color: #eee;
+            border: none;
+        }
+        .glyphicon-color{
+            color:white !important;
+        }
+        .glyphicon-background{
+            background:#4b4343;
+            padding: 1% 0%;
+        }
+        .glyphicon-text{
+            background:rgba(127, 127, 127, 1);
+            color: white;
+            padding: 1% 25% 1% 1%;
+        }
+        .glyphicon-pos{
+            margin: 2% 0 2% 0;
+        }
+        .image-dim{
+            width: 200px;
+        }
+    </style>
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">JFCKPK6KCXTF-22907214-365</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">386662a3-ea7e-46d9-b5e5-fa5344c262e3</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">https://share.ey.net/sites/financebasics/_layouts/15/DocIdRedir.aspx?ID=JFCKPK6KCXTF-22907214-365, JFCKPK6KCXTF-22907214-365</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+
+    
+<body>
+   <div class="col-md-12 col-sm-12 bannerDiv">
+      <div class="pagetitleDiv">Life@work</div>
+   </div>
+   <div class="col-md-12 col-sm-12 col-xs-12 mainDiv " >
+      <div class="secDiv col-md-12 col-sm-12 col-xs-12">
+         <div class="glyphicon-pos">               
+            <span class="glyphicon-background">                
+                <img src="../SiteAssets/ITFinance/images/NewsFeed/icon_news.png" alt="News Icon">
+            </span>
+            <span class="glyphicon-text">DICF News</span>               
+         </div>
+         <div class="month-card month-card-sm month-card-yellow">
+            <strong>April</strong> <span class="btn-add">Add <span> <img src="../SiteAssets/ITFinance/images/NewsFeed/icon_add.png" alt="Add icon"></span> </span>
+         </div>
+         <div class="span12 rectangle-border">
+            <div >
+               29th: Teambuilding day - <strong><b>Bring on your team spirit!</b></strong>                
+            </div>
+         </div>
+         <div class="month-card month-card-sm month-card-yellow">
+            <strong>March</strong>
+         </div>
+         <div class="span12 rectangle-border">
+            <div >
+               Jean Dubont is leaving us - <strong> Farewell afterwork @4p.m.</strong>
+            </div>
+         </div>
+         <div class="month-card month-card-sm month-card-yellow">
+            <strong>February</strong>
+         </div>
+         <div class="span12 rectangle-border">
+            <div >
+               2nd : Pancakes Day                
+            </div>
+         </div>
+         <div class="month-card month-card-sm month-card-yellow">
+            <strong>January</strong>
+         </div>
+         <div class="span12 rectangle-border">
+            <div >
+               30th : Gallette des rois @ 4p.m.                
+            </div>
+         </div>
+         <div class="span12 rectangle-top-border">
+            <div class="card">
+               <div class="card-block">
+                  <p class="card-text">Welcome to our new comers</p>
+               </div>
+               <img class="card-img-bottom image-dim" src="../SiteAssets/ITFinance/images/Life@work_DICF news/icon7.png" alt="Profile pic">
+               <div class="newcomer-designation">
+                  <div>Pierre Martin</div>
+                  <div>Accountant</div>
+               </div>
+            </div>
+         </div>
+         <div class="span12 rectangle-top-border">
+            <div class="card">
+               <img class="card-img-bottom image-dim" src="../SiteAssets/ITFinance/images/Life@work_DICF news/icon6.png" alt="Profile pic">
+               <div class="newcomer-designation">
+                  <div>Marie Dubois</div>
+                  <div>Financial Controller</div>
+               </div>
+            </div>
+         </div>
+         <div class="month-card month-card-sm month-card-yellow">
+            <strong>December</strong>
+         </div>
+         <div class="span12 rectangle-border">
+            <div >
+               20th : EY Christmas party @L'Arc, 8pm - Suit up!
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="bottomDiv"></div>
+</body>
+    
+    
+    

@@ -1,0 +1,808 @@
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://share.ey.net/sites/financebasics/SiteAssets/ITFinance/css/preloader.css" />
+
+<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'> 
+
+<link rel="stylesheet" href="https://share.ey.net/sites/financebasics/SiteAssets/ITFinance/css/ribbon.css">
+<link rel="stylesheet" href="https://share.ey.net/sites/financebasics/SiteAssets/ITFinance/css/SPStyles.css">
+<!-- <link href="../SiteAssets/ITFinance/css/EY_Standard_Style.min.css" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://share.ey.net/sites/financebasics/SiteAssets/ITFinance/fonts/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'> 
+<!-- <script src="../SiteAssets/ITFinance/js/EY_Standard_Script.min.js"></script> -->
+<script src="https://share.ey.net/sites/financebasics/SiteAssets/ITFinance/js/jquery.min.js"></script>
+
+
+<script src="https://share.ey.net/sites/financebasics/SiteAssets/ITFinance/js/SPRibbon.js"></script>
+
+<script src="../SiteAssets/ITFinance/js/angular.min.js"></script>
+<script src="../SiteAssets/ITFinance/js/angular-sanitize.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    body {
+        font-family: 'Noto Sans';
+    }
+    .ms-pub-contentLayout {
+        padding: 0 !important;
+    }
+    .bannerDiv {
+        /* background-image: url("../SiteAssets/ITFinance/images/Life%40work/Life%40header.jpg"); */
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        margin-top:0% !important;           
+    }
+
+    .pagetitleDiv {
+        background-color: white;
+        position: absolute;
+        bottom: 50px;
+        width: 245px;
+        height: 30px;
+        padding-top: 4px;
+        padding-left: 2%;
+        font-weight: 700;
+        font-size: 1.2em;
+        border-left-width: 7px;
+        border-left-style: solid;
+        border-left-color: rgba(253, 229, 0, 1);
+        left: 4%;
+    }
+    
+    .mainDiv {
+        background-color: rgba(239, 239, 239, 1);
+        padding: 0px 4%;
+        position: relative;
+        /* overflow: scroll; */
+        height: auto;            
+    }
+    
+    .secDiv {
+        background-color: white;
+        overflow: hidden;
+        margin-bottom: 5px;
+        height: auto;
+        padding: 1.8%;
+    }
+    
+    .bottomDiv {
+        position: absolute;
+        width: 100%;
+        height: 45px;
+        background-color: rgba(191, 191, 191, 1);
+        bottom: 0px;
+        left: 0px;
+    }        
+    /* .imginfo-text{        
+        background: rgba(191, 191, 191, 1);
+        color: black;        
+        padding: 14.5px 40px 13px 15px;
+        margin-left: -4px;
+    } */
+    .imginfo-text {
+        background: rgba(191, 191, 191, 1);
+        color: black !important;
+        padding: 15px;
+        margin-left: -4px;
+        cursor: pointer;
+        position: relative;
+        padding-left: 75px;
+        padding-right: 55px;
+        top: 15px;
+        padding-top: 12px;
+    }
+    .imginfo-text:after {
+        content: "";
+        background: url(../SiteAssets/ITFinance/images/People/people23.png);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-repeat: no-repeat;
+        left: 0;
+        top: 0;
+    }
+    /* 
+    .imginfo-text-usefulinfo{
+        background: rgba(191, 191, 191, 1);
+        color: black;
+        padding: 13.5px 100px 14px 15px;
+        margin-left: -4px;
+    } */
+
+    .imginfo-text-usefulinfo {
+        background: rgba(191, 191, 191, 1);
+        color: black !important;
+        padding: 15px;
+        margin-left: -4px;
+        cursor: pointer;
+        position: relative;
+        top: 15px;
+        padding-left: 75px;
+        padding-right: 120px;
+        padding-top: 14px;
+    }
+    .imginfo-text-usefulinfo:after{
+        content: "";
+        background: url(https://share.ey.net/sites/financebasics/SiteAssets/ITFinance/images/People/people1_1.jpg);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-repeat: no-repeat;
+        left: 0;
+        top: 0;
+    }
+    .conditional-imgInfo-bg{
+        background: rgba(253, 229, 0, 1) !important;
+    }
+    .imginfo-pos{
+        margin: 1% 0 1% 0;
+        display: inline;
+        text-decoration: none !important;
+    }
+    .imginfo-pos-first{
+        margin-right: 30px;
+    }
+    .icon-imginfo {
+        margin-bottom: 5px;                                                                                   
+    }
+    .outer-div-block{            
+        margin-bottom: 45px;
+    }
+    .margin-jumbotron{                
+        padding-left: 3%;
+        padding-right: 1%;       
+    }
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        .margin-jumbotron{                
+            padding-left: 0%;
+            padding-right: 1%;                   
+        } 
+    }
+    .caption-pos{
+        margin: 1% 0 1% 0;
+        display: inline;
+    }
+    .icon-caption {
+        margin-top: -4px;
+        margin-left: 2px;                                                                                   
+    }
+    .caption-text-info{
+        background: white;
+        color: blue;
+        padding: 10px 65px 10px 15px;
+        margin-left: 4px;
+        margin-right: -5px;
+    }
+    .div-inline{
+        display: inline;
+    }
+    .footer-style-outer-div{
+        background: white;
+        width: 194px;
+        margin-left: 2.6px;
+    }
+    .footer-style-outer-div-imp {            
+        margin-left: 0px !important;
+    }
+    .footer-style-inner-left-div{
+        line-height: 39.5px;
+        width: 180px;
+        padding: 10px;
+        color: #4474a3;
+    }
+    .footer-style-inner-right-div{
+        float: right;
+        width: 50px;
+    }
+    .footer-style-inner-right-div-imp {            
+        width: 45px !important;
+    } 
+    .dim-card{
+        width: 200px;          
+    }
+    .hand-icon{
+        cursor: pointer;
+    }             
+    .col-md-4 {
+        width: 20%;
+        padding-bottom: 20px;
+    }
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    .col-md-4 {            
+        width: 33.33% !important;
+        }  
+    }
+    @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+        .col-md-4 { 
+            width: 33.33% !important;
+        }
+    }    
+    @media all and (max-width: 1350px) {
+        .col-md-4 { 
+            width: 25%;
+        }
+    }    
+    @media all and (max-width: 1100px) {
+        .col-md-4 { 
+            width: 33.33%;
+        }
+    }
+    @media all and (max-width: 800px) {
+        .col-md-4 { 
+            width: 50%;
+        }
+        #orgChart {
+            overflow-x: scroll;
+            width: auto;
+            white-space: nowrap;
+        }
+    }    
+    
+    /*
+    * Styles- OrgChart_l1.html
+    */ 
+    .removable-content{
+        margin: 2% 0 2% 0.5%;
+    }
+    .org-heading{  
+        margin-bottom: 1%;          
+        color: black;
+        font-weight: bolder;
+    }
+    .financial-lt{
+        background: #808080;
+        line-height: 30px;
+        padding-left: 10px;
+        color: white;
+    }
+    .blur-bg{
+        background-image: url("../SiteAssets/ITFinance/images/Homepage/bg1.png");
+        background-size: cover;
+        min-height: 400px;             
+        padding: 2%;
+        margin-left:-13px;
+        margin-right:-13px;
+    }
+    .blur-inner-div{
+        background: white;
+        padding: 4% 5%;
+        min-height: 800px;
+    }
+    .img-dim{
+        width: 70px;
+        height: 70px;
+        position: absolute;                             
+    }
+    .span-name-top{
+        display: inline-block;
+        background: rgba(253, 229, 0, 1);
+        margin-left: 70px;
+        width: 30%; 
+        padding: 12px 10px 8px 15px;
+        text-align: left;
+        min-height: 70px;                                    
+    }
+    .span-name-top-grey{
+        background: #808080 !important;           
+    }        
+    .span-name-top-grey-margin{           
+        margin-bottom: 5%;
+    }        
+    .span-name-grey{        
+        display: inline-block;
+        background: #808080;
+        margin-left: 70px;
+        width: 70%;                   
+        padding: 12px 40px 8px 15px;
+        text-align: left;
+        min-height: 70px;                       
+    }        
+    .span-name-div1{
+        color: black;
+        font-weight: bold;
+        font-size: 1.1em; 
+    }
+    .span-name-div1-white{
+        color: white;
+        font-weight: bold;
+        font-size: 1.1em;        
+    }
+    .span-name-div2{
+        color: black;
+        font-size: 0.75em;            
+        max-width: 80%;            
+    }
+    .span-name-div2-white{
+        color: white;
+        font-size: 0.75em;                       
+        max-width: 80%;        
+    }
+    .show-ellipsis{
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .left-side-box{
+        margin: 1% 0 4% 1%;
+    }
+    .small-box-above-left-row{
+        background: #c0c0c0;
+        max-width: 200px;
+        margin-bottom: 2px;
+        color: black;
+        padding: 5px 0 5px 10px;
+        font-size: 1em;
+        margin-left: 4px;    
+    }    
+    .margin-lower-half{
+        margin-left: 4%;
+    }
+    .margin-bottom-top-span{
+        margin-bottom: 40px;
+    }
+    .close-btn{
+        float: right;
+        font-weight: bolder;
+        color: black;
+    }
+    .has-people-icon{
+        position: absolute;
+        left: 75%;
+        top: 45%;
+    }
+    .has-people-icon-treasury{            
+        top: 35% !important;
+        left: 70% !important;
+    }
+    .has-people-icon-l2{            
+        position: absolute;
+        left: 75%;           
+        margin-top: 20px;
+    }
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {        
+        .has-people-icon{
+            left: 80%;
+        }
+    }
+    @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {        
+        .has-people-icon{
+            left: 80%;
+        }
+    }
+
+    /*
+    * Styles- orgChartL1Treasury.html
+    */
+    .treasury-span{
+        width: 60% !important;
+    }
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    .col-md-3 {            
+        width: 33.33%;
+        }        
+    }
+    @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+    .col-md-3 { 
+        width: 33.33%;
+        }         
+    }        
+    @media all and (max-width: 1165px) {
+    .col-md-3 { 
+        width: 33.33%;
+        }
+    }
+    @media all and (max-width: 890px) {
+    .col-md-3 { 
+        width: 50%;
+        }
+    }
+
+    /*
+     * Styles- OrgChart_l2.html
+     */
+    .margin-bottom_l2{
+        margin-bottom: 5%;
+    }
+    .font_black{
+        color: black;
+    }
+    .navbar-inverse .navbar-nav>li>a {
+        color: lightgray;
+    }
+
+</style>
+    
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <!--[if gte mso 9]><xml>
+        <mso:CustomDocumentProperties>
+        <mso:_dlc_DocId msdt:dt="string">JFCKPK6KCXTF-22907214-399</mso:_dlc_DocId>
+        <mso:_dlc_DocIdItemGuid msdt:dt="string">83076c98-c06e-4d1c-a8dc-94c4cc4eea37</mso:_dlc_DocIdItemGuid>
+        <mso:_dlc_DocIdUrl msdt:dt="string">https://share.ey.net/sites/financebasics/_layouts/15/DocIdRedir.aspx?ID=JFCKPK6KCXTF-22907214-399, JFCKPK6KCXTF-22907214-399</mso:_dlc_DocIdUrl>
+        </mso:CustomDocumentProperties>
+        </xml><![endif]-->
+
+        <script type="text/javascript">   
+                var app = angular.module('orgChartApp', []);
+                app.controller('orgChartCtrl', function ($scope, $rootScope, $http) {
+
+                    $scope.baseUrl = 'https://share.ey.net/sites/financebasics/';
+                                            
+                    // Init imgSrcs
+                    $scope.imgBaseUrl = 'https://my.ey.net/_layouts/15/userphoto.aspx?size=M&accountname=';
+                    $scope.spimnImgSrc = '/_layouts/15/images/spimn.png?rev=23';
+                    $scope.categoryCaptionImg = '../SiteAssets/ITFinance/images/Org_chart_2/icon 3.png';
+                    $scope.addIcon = '../SiteAssets/ITFinance/images/NewsFeed/icon_add.png';
+
+                    // Init toggle related variables
+                    $scope.enableOrgChart = true;              
+
+                    // Init methods to scope variables
+                    $scope.loadTemplate = loadTemplate;
+                    $scope.getCategoryDetails = getCategoryDetails;
+                    $scope.getCategoryDetailsL2 = getCategoryDetailsL2;
+                    $scope.getCategoryDetailsL3 = getCategoryDetailsL3;
+                    $scope.resetL3 = resetL3;
+                    $scope.loadBannerBg = loadBannerBg;
+                    $scope.processImn = processImn;                                                                                                                
+
+                    // Init categories with name and category imgSrc               
+                    $scope.categories = {                    
+                        'catAccounting':{'name':'Accounting','catSrc':'../SiteAssets/ITFinance/images/Org_chart_2/icon 4.png'},
+                        'catAudit':{'name':'Audit','catSrc':'../SiteAssets/ITFinance/images/Org_chart_2/icon 5.png'},
+                        'catAGMASA':{'name':'AGM/ASA','catSrc':'../SiteAssets/ITFinance/images/Org_chart_2/icon6.png','encodedName':'AGM%2FASA'},
+                        'catTreasury':{'name':'Treasury - CM','catSrc':'../SiteAssets/ITFinance/images/Org_chart_2/icon7.png'},
+                        'catGDS':{'name':'GDS','catSrc':'../SiteAssets/ITFinance/images/Org_chart_2/icon8.png'},
+                        'catNone':{'name':'None'},                    
+                    }
+
+                    // Init templates
+                    $scope.cardsTpl = '../SiteAssets/ITFinance/html/OrgTest_cards.html';
+                    $scope.l1Tpl = '../SiteAssets/ITFinance/html/OrgTest_l1.html';
+                    $scope.l1AuditTpl = '../SiteAssets/ITFinance/html/OrgTest_l1_audit.html';
+                    $scope.l1TreasuryTpl = '../SiteAssets/ITFinance/html/OrgTest_l1_treasury.html';
+                    $scope.l2TreasuryTpl = '../SiteAssets/ITFinance/html/OrgTest_l2_treasury.html';
+                    $scope.l2Tpl = '../SiteAssets/ITFinance/html/OrgTest_l2.html';                
+                    $scope.l3Tpl = '../SiteAssets/ITFinance/html/OrgTest_l3.html'; 
+
+                    // get Banner bg            
+                    $scope.loadBannerBg();
+
+                    //Cards template included in OrgChart initially.
+                    $scope.loadTemplate($scope.cardsTpl);                    
+                                                                                                                                                                                
+                    /**
+                    * @function loadTemplate- include the template by passing url.                          
+                    * @param: url                                      
+                    */
+                    function loadTemplate(url){
+                        $scope.templateUrl = url;
+                    }
+                                        
+                    /**
+                    * @function makeHttpReq- Get people under respective categories.
+                    * @param: mUrl             
+                    * @param: options             
+                    */
+                    function makeHttpReq(mUrl, options){                        
+                        $http({
+                            method: 'GET',
+                            url: $scope.baseUrl + mUrl,
+                            headers: {
+                                "Accept": "application/json;odata=verbose"
+                            }
+                            }).then(function (response) {
+                                options.onSuccess(response);
+                                $scope.processImn();                                                                                                                                                  
+                            }, function (error) {
+                                options.onError(error); 
+                        });                                                                    
+                    }
+
+                    /**
+                    * @function getCategoryDetails- Get people under respective categories.
+                    * @param: category             
+                    * @param: url             
+                    */
+                    function getCategoryDetails(category, url){
+                        
+                        $scope.loadTemplate(url);
+
+                        $scope.categoryHeader = category;
+                        if(category == $scope.categories.catAGMASA.name) category = $scope.categories.catAGMASA.encodedName;
+
+                        // Init peopleArr and peopleArrNoSC
+                        $scope.peopleArr = [];
+                        $scope.peopleArrNoSC = [];
+
+                        var url = "_api/web/lists/getByTitle('Organisation Chart')/items?$select=Name/Title,Name/EMail,NameId,HasPeople,Designation,Designation2,Category,Level,Order0,Sub_x002d_Category&$expand=Name&$filter=(Category eq '" + category + "' and Level eq 1)";
+                        var onSuccess = function(response){                                                        
+                            var arr = response.data.d.results;                        
+                                for(var i=0; i<arr.length;i++){
+                                    var imgSrc = $scope.imgBaseUrl+arr[i].Name.EMail
+                                    if(arr[i].Sub_x002d_Category == $scope.categories.catNone.name){
+                                        $scope.peopleArrNoSC.push({
+                                            'name':arr[i].Name.Title,
+                                            'desgn':arr[i].Designation,
+                                            'desgn2':arr[i].Designation2,
+                                            'imgSrc':imgSrc,
+                                            'nameId': arr[i].NameId,
+                                            'category': arr[i].Category,
+                                            'sort': arr[i].Order0,
+                                            'hasPeople': arr[i].HasPeople,
+                                            'email': arr[i].Name.EMail
+                                        })
+                                    } else{
+                                        $scope.peopleArr.push({
+                                            'subC':arr[i].Sub_x002d_Category,
+                                            'name':arr[i].Name.Title,
+                                            'desgn':arr[i].Designation,
+                                            'desgn2':arr[i].Designation2,
+                                            'imgSrc':imgSrc,
+                                            'nameId': arr[i].NameId,
+                                            'category': arr[i].Category,
+                                            'sort': arr[i].Order0,
+                                            'hasPeople': arr[i].HasPeople,
+                                            'email': arr[i].Name.EMail
+                                        })
+                                    }                                                    
+                                }                                                            
+                        }   
+                        var onError = function(error){
+                            console.log(error)
+                        }
+                        // options object containing success and error callbacks
+                        var options = {
+                            onSuccess: onSuccess,
+                            onError: onError
+                        }                        
+                        makeHttpReq(url, options);                        
+                    }
+                            
+                    /**
+                    * @function getCategoryDetailsL2- Get the people in L2            
+                    * @param: item             
+                    * @param: url             
+                    */
+                    function getCategoryDetailsL2(item, url){                
+
+                        $scope.loadTemplate(url);
+
+                        // Assigning l2Header
+                        $scope.l2Header = item.subC;                
+
+                        // Init peopleArrL2
+                        $scope.peopleArrL2 = [];
+
+                        // Assigning new api query if Category == Treasury
+                        var url = "_api/web/lists/getByTitle('Organisation Chart')/items?$select=Name/Title,Name/EMail,NameId,HasPeople,Designation,Designation2,Category,Level,Order0,Sub_x002d_Category&$expand=Name&$filter=(Category eq '" + item.category + "' and Sub_x002d_Category eq '" + item.subC + "' and Level eq 2)";
+                        if(item.category == $scope.categories.catTreasury.name) url = "_api/web/lists/getByTitle('Organisation Chart')/items?$select=Name/Title,Name/EMail,NameId,Relationship/ID,HasPeople,Designation,Designation2,Category,Level,Order0,Sub_x002d_Category&$expand=Name,Relationship&$filter=(Level eq 2 and Relationship/ID eq '" + item.nameId + "')";
+
+                        var onSuccess = function(response){                                                        
+                            var arr = response.data.d.results;
+                                for(var i=0; i<arr.length;i++){
+                                    var imgSrc = $scope.imgBaseUrl+arr[i].Name.EMail                       
+                                    $scope.peopleArrL2.push({
+                                    'name':arr[i].Name.Title,
+                                    'desgn':arr[i].Designation,
+                                    'desgn2':arr[i].Designation2,
+                                    'imgSrc':imgSrc,
+                                    'nameId': arr[i].NameId,
+                                    'category': arr[i].Category,
+                                    'sort': arr[i].Order0,
+                                    'hasPeople': arr[i].HasPeople,
+                                    'email': arr[i].Name.EMail
+                                    })
+                                                                                    
+                                }                                                             
+                        }   
+                        var onError = function(error){
+                            console.log(error)
+                        }
+                        // options object containing success and error callbacks
+                        var options = {
+                            onSuccess: onSuccess,
+                            onError: onError
+                        }                                                
+                        makeHttpReq(url, options);                                           
+                    }
+                    
+                    /**
+                    * @function getCategoryDetailsL3- Get the people in L3                          
+                    * @param: item                                      
+                    */
+                    function getCategoryDetailsL3(item){                
+                                        
+                        // Showing l3 chart                                                    
+                        $scope.l3Url = $scope.l3Tpl;
+                                    
+                        // Init peopleArrL3
+                        $scope.peopleArrL3 = [];
+
+                        var url = "_api/web/lists/getByTitle('Organisation Chart')/items?$select=Name/Title,Name/EMail,NameId,Relationship/ID,HasPeople,Designation,Designation2,Category,Level,Order0,Sub_x002d_Category&$expand=Name,Relationship&$filter=(Level eq 3 and Relationship/ID eq '" + item.nameId + "' )";
+                        var onSuccess = function(response){                                                        
+                            var arr = response.data.d.results;
+                            for(var i=0; i<arr.length;i++){
+                                var imgSrc = $scope.imgBaseUrl+arr[i].Name.EMail                        
+                                $scope.peopleArrL3.push({
+                                    'name':arr[i].Name.Title,
+                                    'desgn':arr[i].Designation,
+                                    'desgn2':arr[i].Designation2,
+                                    'imgSrc':imgSrc,
+                                    'nameId': arr[i].NameId,
+                                    'category': arr[i].Category,
+                                    'sort': arr[i].Order0,
+                                    'hasPeople': arr[i].HasPeople,
+                                    'email': arr[i].Name.EMail
+                                })                                                                             
+                            }                                                            
+                        }   
+                        var onError = function(error){
+                            console.log(error)
+                        }
+                        // options object containing success and error callbacks
+                        var options = {
+                            onSuccess: onSuccess,
+                            onError: onError
+                        }                        
+                        makeHttpReq(url, options);                        
+                    }
+                        
+                    /**
+                    * @function resetL3- Close level 3 and reset the tpl                          
+                    * @param: url                                      
+                    */
+                    function resetL3(url){                                 
+                        $scope.l3Url='';                
+                        $scope.loadTemplate(url);
+                    }
+
+                    /**
+                    * @function processImn- func to process Imn                                                                                   
+                    */
+                    function processImn(){
+                        setTimeout(function() {
+                            ProcessImn();
+                        }, 500);
+                    }
+
+                    /**
+                    * @Eventlistener- Execites when any content is included                                                                                   
+                    */
+                    $rootScope.$on("$includeContentLoaded", function(event, templateName){                        
+                        $scope.processImn();
+                    });
+
+                    /**
+                    * @function loadBannerBg- Get banner bg by http request                                                                                  
+                    */
+                    function loadBannerBg(){                
+                        var url = "_api/web/lists/getByTitle('Finance Banner')/items";                                    
+                        var onSuccess = function(response){                                                                                                              
+                            $scope.datas1 = response.data.d.results;                                                                                                                                   
+                        }   
+                        var onError = function(error){
+                            console.log(error)
+                        }
+                        // options object containing success and error callbacks
+                        var options = {
+                            onSuccess: onSuccess,
+                            onError: onError
+                        }                                                
+                        makeHttpReq(url, options);
+                    }
+
+                    /**
+                    * @function ImageBack- function to set the banner ng-style 
+                    * @param: Url                                                                                   
+                    */             
+                    $scope.ImageBack=function(Url){
+                        return{
+                            'background-image':'url('+Url+')'
+                        };
+
+                    };                                 
+                });
+                            
+                /**
+                * @Jquery event to give tooltip when ellipsis is shown on long names and desgns.
+                */            
+                $(document).on('mouseenter', ".span-name-div1-white, .span-name-div1, .span-name-div2-white, .span-name-div2", function () {
+                    var $this = $(this);
+                    if (this.offsetWidth < this.scrollWidth && !$this.attr('title')) {
+                        $this.tooltip({
+                            title: $this.text(),
+                            placement: "bottom"
+                        });
+                        $this.tooltip('show');
+                    }
+                }); 
+
+                window.onload = function () {
+                    toggleRibbon();
+                    setTimeout(function(){
+                        $('#loading').hide();
+                    },300);            
+                }
+        </script>    
+    </head>
+    <body>
+        <div id="loading">
+                <div id="loading-center">
+                    <div id="loading-center-absolute">
+                        <div class="object" id="object_four"></div>
+                        <div class="object" id="object_three"></div>
+                        <div class="object" id="object_two"></div>
+                        <div class="object" id="object_one"></div>
+                    </div>
+                </div>
+        </div>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <div class="navbar-inner">
+             <div class="container">
+                <div class="navbar-header">
+                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   </button>
+                   <a id="logo-container" class="navbar-brand" href="https://share.ey.net/sites/financebasics/SitePages/FinanceHome.aspx">
+                   <img src="https://share.ey.net/sites/financebasics/SiteAssets/Images/EYLogo.png" height="86%" alt="EY_Logo">
+                   </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <h2 class="site-title">Finance Basics</h2>
+                    <ul class="nav navbar-nav navbar-left">
+                       <li><a href="https://share.ey.net/sites/financebasics/SitePages/FinanceHome.aspx" id="home" >Home</a></li>
+                       <li><a href="https://share.ey.net/sites/financebasics/SitePages/people.aspx" id="home" class="activePage">People</a></li>
+                       <li><a href="https://share.ey.net/sites/financebasics/SitePages/Support%20Applications.aspx" id="home">Support App</a></li>
+                        <li><a href="https://share.ey.net/sites/financebasics/SitePages/Working%20Tools.aspx" id="home">Working Tools</a></li>
+                        <li><a href="https://share.ey.net/sites/financebasics/SitePages/innerpage.aspx?page=Life@Work" id="home">Life @Work</a></li>
+                        <li><a href="https://share.ey.net/sites/financebasics/SitePages/NewsFeed.aspx" id="home">Newsfeed</a></li>
+                        <li><a href="https://share.ey.net/sites/financebasics/SitePages/innerpage.aspx?page=Projects" id="home">Projects</a></li>
+                        <li><a href="https://share.ey.net/sites/financebasics/SitePages/innerpage.aspx?page=Calendar" id="home">Calendars</a></li>
+                        <li><a href="https://share.ey.net/sites/financebasics/SitePages/FAQ.aspx" id="home">FAQ</a></li>
+                        <li><a href="https://share.ey.net/sites/financebasics/SitePages/contactsNew.aspx" id="home">Contacts</a></li>
+                        <li><a href="https://share.ey.net/sites/financebasics/SitePages/OneDrive.aspx" id="home">OneDrive</a></li>
+                       
+                    </ul>
+                </div>
+             </div>
+          </div>
+          <span class="grey-text EY rbn-toggle hide-on-med-and-down rbn-hide" onclick="toggleRibbon()">&nbsp;Ribbon</span>
+       </nav>
+
+        <div id="orgChart" ng-app="orgChartApp" ng-controller="orgChartCtrl">
+            <div ng-repeat="z in datas1">
+                <div ng-if="z.Category=='People'"> 
+                    <div class="col-md-12 col-sm-12 col-xs-12 bannerDiv"  ng-style="ImageBack(z.Bannerbackground.Url)">
+                        <div class="pagetitleDiv">{{z.Category}}</div>
+                    </div>
+                </div>
+            </div>            
+            <div class="mainDiv col-md-12 col-sm-12 col-xs-12">
+                <div class="secDiv col-md-12 col-sm-12 col-xs-12">
+                        <div class="outer-div-block">
+                            <a class="imginfo-pos imginfo-pos-first hand-icon" ng-href="/sites/financebasics/SitePages/UsefullLinks.aspx">                               
+                                <!-- <span><img class="icon-imginfo" src="../SiteAssets/ITFinance/images/People/people1.png" alt="Info Icon"></span>          -->
+                                <span ng-class="{'imginfo-text-usefulinfo':true, 'conditional-imgInfo-bg': !enableOrgChart}">Useful Info</span>          
+                            </a>
+                            <a class="imginfo-pos hand-icon">                               
+                                <!-- <span><img class="icon-imginfo" src="../SiteAssets/ITFinance/images/People/people23.png" alt="Info Icon"></span> -->
+                                <span ng-class="{'imginfo-text':true, 'conditional-imgInfo-bg': enableOrgChart}">Organizational Chart</span>              
+                            </a>                    
+                        </div>
+                        <!-- Replacable Content -->
+                            <div ng-include src="templateUrl"></div>
+                        <!-- Replacable Content -->
+                </div>
+            </div>
+            <div class="bottomDiv">                       
+            </div> 
+        </div>   
+    </body>
+</html>

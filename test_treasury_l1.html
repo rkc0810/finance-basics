@@ -1,0 +1,80 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+        <head>
+            
+        
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">JFCKPK6KCXTF-22907214-539</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">797c4bb0-ac99-4dee-af3a-01665be9f61b</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">https://share.ey.net/sites/financebasics/_layouts/15/DocIdRedir.aspx?ID=JFCKPK6KCXTF-22907214-539, JFCKPK6KCXTF-22907214-539</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+<title></title></head>
+    <body>
+        <div class="removable-content">
+            <div class="org-heading">{{categoryHeader}} Chart</div>  
+            <div class="financial-lt">Finance Leadership Team</div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="blur-bg">
+                        <div class="blur-inner-div">
+                            <div ng-click="loadTemplate('../SiteAssets/ITFinance/html/OrgTest_Cards.html')" class="close-btn hand-icon">Close</div>
+                            <!--Upper half -->                                        
+                                <div class="row" ng-repeat="item in peopleArrNoSC | orderBy:'sort'">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 text-center imginfo-pos imginfo-pos-first">
+                                        <span ng-show={{item.hasPeople}} class="has-people-icon"><img src="../SiteAssets/ITFinance/images/NewsFeed/icon_add.png" alt="Expand icon"></span>                               
+                                        <span><img class="img-dim" src="{{item.imgSrc}}" alt="Profile pic"></span>                                             
+                                        <span ng-class="{'span-name-top': $first, 'span-name-top span-name-top-grey': !$first, 'span-name-top-grey-margin': $last }" >
+                                            <div ng-class="{'span-name-div1 show-ellipsis': $first, 'span-name-div1-white show-ellipsis': !$first}" >{{item.name}}</div>  
+                                            <div ng-class="{'span-name-div2 show-ellipsis': $first, 'span-name-div2-white show-ellipsis': !$first}" >{{item.desgn}}</div>
+                                            <div ng-class="{'span-name-div2 show-ellipsis': $first, 'span-name-div2-white show-ellipsis': !$first}" >{{item.desgn2}}</div>
+                                        </span>                                                       
+                                    </div>
+                                </div>                                                                                                                                                                                
+                            <!--Upper half -->
+        
+                            <!--Lower Half -->
+                                <div class="row margin-lower-half">                                      
+                                    <!-- Left column -->   
+                                        <div class="col-md-3 col-sm-3 col-xs-3 col-lg-3">                                        
+                                            <div ng-repeat="item in peopleArrACM" class="row" ng-click="includeTemplate('../SiteAssets/ITFinance/html/OrgTest_level3.html')">
+                                                <div class="left-side-box">                                                    
+                                                    <div>
+                                                        <span><img class="img-dim" src="{{item.imgSrc}}" alt="Profile pic"></span>         
+                                                        <span class="span-name-grey">
+                                                            <div class="span-name-div1-white show-ellipsis">{{item.name}}</div>
+                                                            <div class="span-name-div2-white show-ellipsis">{{item.desgn}}</div>                                       
+                                                        </span>
+                                                    </div>                                                                                                                                                  
+                                                </div>
+                                            </div>                                                                                                                                                                                           
+                                        </div>
+                                    <!-- Left column -->   
+                                    
+                                    <!-- Right column --> 
+                                        <div class="col-md-9 col-sm-9 col-xs-9 col-lg-9 margin-top-right-col">
+                                            <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6" ng-repeat="item in peopleArrTreasury">
+                                                <div class="left-side-box">                                                
+                                                    <div>
+                                                        <span><img class="img-dim" src="{{item.imgSrc}}" alt="Profile pic"></span>         
+                                                        <span class="span-name-grey">
+                                                            <div class="span-name-div1-white show-ellipsis">{{item.name}}</div>
+                                                            <div ng-click="$event.stopPropagation()" class="span-name-div2-white show-ellipsis">{{item.desgn}}</div>                                       
+                                                            <div ng-click="$event.stopPropagation()" class="span-name-div2-white show-ellipsis">{{item.desgn2}}</div>                                       
+                                                        </span>
+                                                    </div>                                                                                                                                                  
+                                                </div>
+                                            </div>                                                               
+                                        </div>                                                                                                                             
+                                    <!-- Right column -->
+                                </div>
+                            <!--Lower Half -->                                    
+                        </div>
+                    </div>
+                </div>
+            </div>                    
+        </div>
+    </body>
+</html>  
+
+

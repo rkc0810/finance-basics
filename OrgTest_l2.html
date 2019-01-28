@@ -1,0 +1,65 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>                 
+        <!--[if gte mso 9]><xml>
+        <mso:CustomDocumentProperties>
+        <mso:_dlc_DocId msdt:dt="string">JFCKPK6KCXTF-22907214-430</mso:_dlc_DocId>
+        <mso:_dlc_DocIdItemGuid msdt:dt="string">46f93086-7a2e-4e84-b5c4-f39eab814484</mso:_dlc_DocIdItemGuid>
+        <mso:_dlc_DocIdUrl msdt:dt="string">https://share.ey.net/sites/financebasics/_layouts/15/DocIdRedir.aspx?ID=JFCKPK6KCXTF-22907214-430, JFCKPK6KCXTF-22907214-430</mso:_dlc_DocIdUrl>
+        </mso:CustomDocumentProperties>
+        </xml><![endif]-->
+    </head>
+    <body>
+        <div class="removable-content">
+            <!-- <div class="org-heading">{{categoryHeader}} Chart</div>   -->
+            <div class="financial-lt">{{categoryHeader}} Team</div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="blur-bg">
+                        <div class="blur-inner-div">
+                            <div class="margin-bottom_l2">
+                                <span class="font_black">{{l2Header}}</span>       
+                                <span ng-click="resetL3(l1Tpl)" class="close-btn hand-icon">Close</Span>
+                            </div>                                                                       
+                            <!--Lower Half -->
+                                <div class="row margin-lower-half">
+                                    <!-- Left column -->   
+                                        <div class="col-md-6 col-sm-6 col-xs-6">                                        
+                                            <div class="row hand-icon" ng-repeat="item in peopleArrL2 | orderBy:'sort'" ng-click='getCategoryDetailsL3(item)'>
+                                                <div class="left-side-box">                                                    
+                                                    <div>
+                                                        <span class="ms-imnSpan">
+                                                                <a href='#' onclick='IMNImageOnClick(event);return false;' 
+                                                                    class='ms-imnlink' tabIndex='-1'>
+                                                                    <img name='imnmark' 
+                                                                            title='' ShowOfflinePawn='1' class='ms-hide' src={{spimnImgSrc}} 
+                                                                            alt='User Presence' sip='{{item.email}}' id='imn_{{item.nameId}}_{{$index}},type=sip' />
+                                                                </a>                        
+                                                                <span class="ms-peopleux-userImgWrapper" ></span>
+                                                                <span ><img class="img-dim" src="{{item.imgSrc}}" alt="Profile pic"></span>                   
+                                                        </span>
+                                                        <span ng-show={{item.hasPeople}} class="has-people-icon-l2"><img src="{{addIcon}}" alt="Expand icon"></span>                                                    
+                                                        <span class="span-name-grey">
+                                                            <div class="span-name-div1-white show-ellipsis">{{item.name}}</div>
+                                                            <div ng-click="$event.stopPropagation()" class="span-name-div2-white show-ellipsis">{{item.desgn}}</div>                                       
+                                                            <div ng-click="$event.stopPropagation()" class="span-name-div2-white show-ellipsis">{{item.desgn2}}</div>                                       
+                                                        </span>
+                                                    </div>                                                                                                                                                  
+                                                </div>
+                                            </div>                                                                                                                                                                                                                                                                        
+                                        </div>
+                                    <!-- Left column -->   
+                                    
+                                    <!-- Right column --> 
+                                        <div ng-include src="l3Url"></div>                                        
+                                    <!-- Right column -->
+                                </div>
+                            <!--Lower Half -->                                    
+                        </div>
+                    </div>
+                </div>
+            </div>                    
+        </div>
+    </body>
+</html>  
+
+

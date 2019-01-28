@@ -1,0 +1,34 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <!--[if gte mso 9]><xml>
+        <mso:CustomDocumentProperties>
+        <mso:_dlc_DocId msdt:dt="string">JFCKPK6KCXTF-22907214-560</mso:_dlc_DocId>
+        <mso:_dlc_DocIdItemGuid msdt:dt="string">1652ef79-ffb9-4b97-9218-47957f9ea33f</mso:_dlc_DocIdItemGuid>
+        <mso:_dlc_DocIdUrl msdt:dt="string">https://share.ey.net/sites/financebasics/_layouts/15/DocIdRedir.aspx?ID=JFCKPK6KCXTF-22907214-560, JFCKPK6KCXTF-22907214-560</mso:_dlc_DocIdUrl>
+        </mso:CustomDocumentProperties>
+        </xml><![endif]-->
+    </head>
+    <body>
+        <div class="col-md-6 col-sm-6 col-xs-6" >
+            <div class="row" ng-repeat="item in peopleArrL3 | orderBy:'sort'">
+                <div class="left-side-box">
+                    <span class="ms-imnSpan">
+                            <a href='#' onclick='IMNImageOnClick(event);return false;' 
+                                class='ms-imnlink' tabIndex='-1'>
+                                <img name='imnmark' 
+                                        title='' ShowOfflinePawn='1' class='ms-hide' src={{spimnImgSrc}} 
+                                        alt='User Presence' sip='{{item.email}}' id='imn_{{item.nameId}}_{{$index}},type=sip' />
+                            </a>                        
+                            <span class="ms-peopleux-userImgWrapper" ></span>
+                            <span ><img class="img-dim" src="{{item.imgSrc}}" alt="Profile pic"></span>                   
+                    </span>                                                                
+                    <span class="span-name-grey">
+                        <div class="span-name-div1-white show-ellipsis">{{item.name}}</div>
+                        <div ng-click="$event.stopPropagation()" class="span-name-div2-white show-ellipsis">{{item.desgn}}</div>                                       
+                        <div ng-click="$event.stopPropagation()" class="span-name-div2-white show-ellipsis">{{item.desgn2}}</div>                                       
+                    </span>                                                       
+                </div>
+            </div>                                                       
+        </div>        
+    </body>
+</html>
